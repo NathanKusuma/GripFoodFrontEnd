@@ -34,7 +34,7 @@ const RestaurantTableRow: React.FC<{
 const IndexPage: Page = () => {
 
     const swrFetcher = useSwrFetcherWithAccessToken();
-    const { data, error } = useSwr('/api/be/api/FoodItems/{id}', swrFetcher);
+    const { data, error } = useSwr('/api/be/api/Restaurants?', swrFetcher);
 
     return (
         <div>
@@ -44,7 +44,7 @@ const IndexPage: Page = () => {
             <table className='table-auto mt-5'>
                 <thead className='bg-slate-700 text-white'>
                     <tr>
-                        <th className='px-4 py-2'>ID</th>
+                        <th className='px-4 py-2'>Id</th>
                         <th className='px-4 py-2'>Name</th>
                         <th className='px-4 py-2'></th>
                     </tr>
